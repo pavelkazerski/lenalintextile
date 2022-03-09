@@ -2180,6 +2180,130 @@ p {
           transform: rotate(90deg);
 }
 
+.slide-products-line__body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-products-line__decor {
+  width: 100%;
+  padding-bottom: 100%;
+}
+
+.slide-products-line__social {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(0px, 100%);
+      -ms-transform: translate(0px, 100%);
+          transform: translate(0px, 100%);
+}
+
+.social-products-line {
+  width: 100%;
+  height: 100%;
+}
+
+.social-products-line__body {
+  position: relative;
+  background-color: #F1EEDA;
+  width: 100%;
+  height: 100%;
+}
+
+.social-products-line__item {
+  position: absolute;
+}
+
+.social-products-line__item::before {
+  -webkit-transition: color 0.3s ease 0s;
+  -o-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.social-products-line__item_instagram {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 5.875rem;
+  height: 4.625rem;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0px);
+      -ms-transform: translate(-50%, 0px);
+          transform: translate(-50%, 0px);
+  background-color: white;
+  border-bottom-left-radius: 209.5px;
+  border-bottom-right-radius: 209.5px;
+}
+
+.social-products-line__item_instagram::before {
+  font-size: 1.4375rem;
+  color: #DBD4A5;
+  -webkit-transform: translate(0px, -20%);
+      -ms-transform: translate(0px, -20%);
+          transform: translate(0px, -20%);
+}
+
+.social-products-line__item_favorite {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 0.9375rem;
+     -moz-column-gap: 0.9375rem;
+          column-gap: 0.9375rem;
+  top: 50%;
+  left: 20%;
+}
+
+.social-products-line__item_favorite::before {
+  font-size: 1.5rem;
+}
+
+.social-products-line__item_favorite span {
+  font-size: 1.0625rem;
+  line-height: 1.6470588235;
+}
+
+.social-products-line__item_watch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 0.9375rem;
+     -moz-column-gap: 0.9375rem;
+          column-gap: 0.9375rem;
+  top: 50%;
+  right: 20%;
+}
+
+.social-products-line__item_watch::before {
+  font-size: 1.5rem;
+}
+
+.social-products-line__item_watch span {
+  font-size: 1.0625rem;
+  line-height: 1.6470588235;
+}
+
 .swiper {
   overflow: hidden;
 }
@@ -2845,6 +2969,10 @@ p {
   .slider-news__more_next {
     top: 38%;
   }
+
+  .slide-products-line__decor {
+    padding-bottom: 70%;
+  }
 }
 
 @media (any-hover: hover) {
@@ -2947,5 +3075,31 @@ p {
     -webkit-transform: rotate(-90deg) translate(0px, -4px);
         -ms-transform: rotate(-90deg) translate(0px, -4px);
             transform: rotate(-90deg) translate(0px, -4px);
+  }
+
+  .slide-products-line__social {
+    -webkit-transition: -webkit-transform 0.25s ease 0s;
+    transition: -webkit-transform 0.25s ease 0s;
+    -o-transition: transform 0.25s ease 0s;
+    transition: transform 0.25s ease 0s;
+    transition: transform 0.25s ease 0s, -webkit-transform 0.25s ease 0s;
+  }
+
+  .slide-products-line__body:hover .slide-products-line__social {
+    -webkit-transform: translate(0px, 0%);
+        -ms-transform: translate(0px, 0%);
+            transform: translate(0px, 0%);
+  }
+
+  .social-products-line .social-products-line__item_instagram:hover::before {
+    color: #423F34;
+  }
+
+  .social-products-line .social-products-line__item_favorite:hover::before {
+    color: #DBD4A5;
+  }
+
+  .social-products-line .social-products-line__item_watch:hover::before {
+    color: #DBD4A5;
   }
 }
